@@ -11,7 +11,18 @@ function App() {
   const profit = ArrayFunctions.getHigherProfit([...prices]);
 
   const arrayToRotate = [1,2,3, 4, 5, 6]
-  const arrayRotated = ArrayFunctions.rotateArrayByKSolution2([...arrayToRotate], 3)
+  const arrayRotated = [...arrayToRotate]
+  ArrayFunctions.rotateArrayByKSolution2(arrayRotated, 3)
+
+  const arrayDuplciated = [1,2,3,3,4,5,6]
+  var containsDuplicate = !ArrayFunctions.containsDuplicate2(arrayDuplciated)
+
+  const arrayToFindSingleNumber = [2,2,1]
+  var singleNumber = ArrayFunctions.findSingleNumber(arrayToFindSingleNumber)
+
+  const intersectoin1 = [4,9,5]
+  const intersectoin2 = [9,4,9,8,4]
+  var resultIntersection = ArrayFunctions.intersectionTwoArrays(intersectoin1, intersectoin2)
   
   return (
     <div className="App">
@@ -29,6 +40,22 @@ function App() {
         <p>Array 3 - Rotate</p>
         <p>Parameter: {arrayToRotate.join(", ")}</p>
         <p>Result: {arrayRotated.join(', ')}</p>
+      </div>
+      <div>
+        <p>Array 4 - Contains Duplicate</p>
+        <p>Parameter: {arrayDuplciated.join(", ")}</p>
+        <p>Result: {containsDuplicate.toString()}</p>
+      </div>
+      <div>
+        <p>Array 5 - Find Single Number</p>
+        <p>Parameter: {arrayToFindSingleNumber.join(", ")} </p>
+        <p>Result: {singleNumber}</p>
+      </div>
+      <div>
+        <p>Array 6 - Intersection of Two Arrays II</p>
+        <p>Parameter: {intersectoin1.join(", ")} </p>
+        <p>Parameter: {intersectoin2.join(", ")} </p>
+        <p>Result: {resultIntersection.join(", ")}</p>
       </div>
     </div>
     
