@@ -83,8 +83,7 @@ class ArrayFunctions {
     if(nums1.length < nums2.length) {
       var nums2Aux = [...nums2.sort()]
       var nums1Aux = [...nums1.sort()]
-      console.log(nums2)
-      console.log(nums1)
+      
       for (var i=0; i < nums1Aux.length; i++) {
         for(var y=0; y < nums2Aux.length; y++) {
           if(nums2Aux[i] === nums1Aux[y]){
@@ -121,6 +120,33 @@ class ArrayFunctions {
     }
 
     return resultArray;
+  }
+
+  static intersectionTwoArrays2(nums1:Array<number>, nums2:Array<number>){
+        nums1 = nums1.sort();
+        nums2 = nums2.sort();
+        let i = 0;
+        let j = 0;
+        var res:Array<number> =  []
+        
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] < nums2[j]) {
+                i++;
+            } else if (nums1[i] > nums2[j]) {
+                j++;
+            } else {
+                res.push(nums1[i]);
+                i++;
+                j++;
+            }
+        }
+        
+        return res;
+  }
+
+  static plusOne(digits:Array<number>) {
+    digits.spli
+
   }
 }
 

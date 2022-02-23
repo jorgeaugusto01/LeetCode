@@ -20,9 +20,9 @@ function App() {
   const arrayToFindSingleNumber = [2,2,1]
   var singleNumber = ArrayFunctions.findSingleNumber(arrayToFindSingleNumber)
 
-  const intersectoin1 = [4,9,5]
-  const intersectoin2 = [9,4,9,8,4]
-  var resultIntersection = ArrayFunctions.intersectionTwoArrays(intersectoin1, intersectoin2)
+  const intersectoin1 = [4,9,5,5]
+  const intersectoin2 = [9,4,9,8,4, 5]
+  var resultIntersection = ArrayFunctions.intersectionTwoArrays2(intersectoin1, intersectoin2)
   
   return (
     <div className="App">
