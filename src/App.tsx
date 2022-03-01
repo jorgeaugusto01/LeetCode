@@ -23,6 +23,12 @@ function App() {
   const intersectoin1 = [4,9,5,5]
   const intersectoin2 = [9,4,9,8,4, 5]
   var resultIntersection = ArrayFunctions.intersectionTwoArrays2(intersectoin1, intersectoin2)
+
+  const digits = [9,8,9]
+  var resultSumPlusOne = ArrayFunctions.plusOne([...digits])
+
+  const moveZeros = [0,0,1]
+  var zerosMoved = ArrayFunctions.moveZerosToEnd([...moveZeros])
   
   return (
     <div className="App">
@@ -57,8 +63,22 @@ function App() {
         <p>Parameter: {intersectoin2.join(", ")} </p>
         <p>Result: {resultIntersection.join(", ")}</p>
       </div>
+      <div>
+        <p>Array 7 - Plus One</p>
+        <p>Parameter: {digits.join(", ")} </p>
+        <p>Result: {resultSumPlusOne.join(', ')}</p>
+      </div>
+      <div>
+        <p>Array 8 - Plus One</p>
+        <p>Parameter: {digits.join(", ")} </p>
+        <p>Result: {resultSumPlusOne.join(', ')}</p>
+      </div>
+      <div>
+        <p>Array 9 - Move Zeros</p>
+        <p>Parameter: {moveZeros.join(", ")} </p>
+        <p>Result: {zerosMoved.join(', ')}</p>
+      </div>
     </div>
-    
   );
 }
 

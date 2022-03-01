@@ -145,8 +145,46 @@ class ArrayFunctions {
   }
 
   static plusOne(digits:Array<number>) {
-    digits.spli
 
+    let length = digits.length - 1;
+
+    while(digits[length] === 9) {
+      digits[length] = 0
+      length -= 1
+    }
+
+    if (length < 0) {
+      digits = [1].concat(digits)
+    }
+    else {
+      digits[length] += 1
+    }
+
+    return digits;
+    
+  }
+
+  static moveZerosToEnd(nums:Array<number>) {
+
+    var y = 0;
+    for(var i = 0; i <=nums.length-1; i++) {
+      if(nums[i] !== 0) {
+        nums[y] = nums[i]
+        y = y + 1;
+      }
+    }
+
+    for(var i = y; i <= nums.length-1; i++) {
+      nums[i] = 0;
+    }
+
+    return nums;
+  }
+
+  static moveOne(num:Array<number>, index:number) {
+    for(var y = index; y < num.length; y++) {
+      num[y] = num[y+1]
+    }
   }
 }
 
